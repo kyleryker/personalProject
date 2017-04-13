@@ -1,6 +1,6 @@
-const express = require('express');
+const express = require ('express');
 const bodyParser = require('body-parser');
-const massive = require('massive');
+const massive = require ('massive');
 let connectionString = "postgres://postgres:mikhail4@localhost:3001/postgres";
 const app = express();
 
@@ -11,11 +11,12 @@ let db = app.get('db');
 
 app.use(bodyParser.json());
 
-app.use(express.static('public'))
+app.use(express.static('build'))
 
 app.get('/api/home', (req, res, next) => {
   db.inventory(function(err,data){
     res.status(200).json(data);
+    console.log(data);
   });
 });
 
@@ -27,4 +28,4 @@ app.get('/api/item', (req, res, next) =>{
   }
 });
 
-app.listen(3000, () => console.log('listening on port 3000'));
+app.listen(3002, () => console.log('listening on port 3002'));
