@@ -13,19 +13,34 @@ app.use(bodyParser.json());
 
 app.use(express.static('build'))
 
-app.get('/api/home', (req, res, next) => {
-  db.inventory(function(err,data){
+app.get('/inventory:year', (req, res, next) => {
+  db.turnover((err,data) => {
     res.status(200).json(data);
     console.log(data);
   });
 });
-
-app.get('/api/item', (req, res, next) =>{
-  if (req.id == item.id){
-    res.status(200).json(item);
-  }else{
-    res.status(404).send('item not found');
-  }
+app.get('/inventory:period', (req, res, next) => {
+  db.writeoff((err, data) => {
+    res.status(200).json(data);
+    console.log(data);
+  });
 });
-
+app.get('./inventory:material', (req, res, next) => {
+  db.holding((err, data) => {
+    res.status(200).json(data);
+    console.log(data);
+  });
+});
+app.get('./inventory:period', (req, res, next) => {
+  db.avginventory((err, data) => {
+    res.status(200).json(data);
+    console.log(data);
+  });
+});
+app.get('./inventory:year', (req, res, next) => {
+  db.daystosell((err, data) => {
+    res.status(200).json(data);
+    console.log(data);
+  });
+});
 app.listen(3002, () => console.log('listening on port 3002'));
