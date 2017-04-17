@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import "../public/index.css";
-let data = 5;
+
 
 export default class daysToSell extends React.Component {
     constructor(props) {
@@ -24,14 +24,22 @@ export default class daysToSell extends React.Component {
     componentDidMount() {
         axios.get('http://localhost:3002/inventory/daystosell?value=' + this.state.value).then((res) => {
             console.log(res);
-            this.setState({data:res.data[0]});
+            this.setState({data:res.data[0].days});
         });
     }
         render() {
             return (
                 <div className="main5">
+                <div className='title'>
+                Days to Sell Stock
+                </div>
+                <div className='input'>
                     <input type='text' value={this.state.value} placeholder='Fiscal Year' onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/> {this.state.data}
+                    <input type='submit' value='Submit'/>
+                    </div>
+                    <div className='text5'>
+                    {this.state.data * 365} days
+                    </div>
                 </div>
             )
         }

@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import "../public/index.css";
-let data = 5;
+
 
 export default class Writeoff extends React.Component {
     constructor(props) {
@@ -19,7 +19,7 @@ export default class Writeoff extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({data:this.state.value});
+        this.setState({value:this.state.value});
     }
     componentDidMount() {
         axios.get(`http://localhost:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
@@ -30,8 +30,16 @@ export default class Writeoff extends React.Component {
         render() {
             return (
                 <div className="main2">
+                <div className='title'>
+                Inventory Writeoff
+                </div>
+                <div className='input'>
                     <input type='text' value={this.state.value} placeholder='Sales Period' onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/> {this.state.data}
+                    <input type='submit' value='Submit'/>
+                    </div>
+                    <div className='text2'>
+                    {this.state.data} written off
+                    </div>
                 </div>
             )
         }

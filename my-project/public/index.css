@@ -1,40 +1,77 @@
 .main1{
-  background-color:blue;
-  height: 50vh;
-  width: 33vw;
+  height: 49vh;
+  width: 49vw;
   position: absolute;
   left: 0;
   top:0;
+  border: solid 3px lightblue;
 }
 .main2{
-  background-color: red;
-  height: 100vh;
-  width: 33vw;
+  height: 49vh;
+  width: 49vw;
   position:absolute;
-  top: 0;
-  left: 33.5vw;
+  top: 50vh;
+  left: 0;
+  border: solid 3px lightblue;
 }
 .main3{
-  background-color: green;
-  height: 50vh;
-  width: 33vw;
+  height: 32vh;
+  width: 50vw;
   position: absolute;
   right: 0;
   top: 0;
+  border: solid 3px lightblue;
 }
 .main4{
-  background-color: yellow;
-  height: 50vh;
-  width: 33vw;
+  height: 33vh;
+  width: 50vw;
   position: absolute;
-  left: 0;
-  bottom: 0;
+  right: 0;
+ top: 32vh;
+ border: solid 3px lightblue;
 }
 .main5{
-  background-color: white;
-  height: 50vh;
-  width: 33vw;
+  height: 33vh;
+  width: 50vw;
   position: absolute;
   right: 0;
   bottom: 0;
+  border: solid 3px lightblue;
+}
+.text1{
+text-align: center;
+font-size: 70px;
+position:relative;
+top: 70px;
+}
+.text2{
+  text-align: center;
+  font-size: 70px;
+  position:relative;
+  top: 70px;
+}
+.text3{
+  text-align: center;
+  font-size: 50px;
+  position:relative;
+  top: 35px;
+}
+.text4{
+  text-align: center;
+  font-size: 50px;
+  position:relative;
+  top: 35px;
+}
+.text5{
+  text-align: center;
+  font-size: 50px;
+  position:relative;
+  top: 35px;
+}
+.title{
+  text-align: center;
+  font-size: 30px;
+}
+.input{
+  text-align: center;
 }

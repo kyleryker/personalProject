@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import "../public/index.css";
-let data = 5;
+
 
 export default class AvgInventory extends React.Component {
     constructor(props) {
@@ -24,14 +24,22 @@ export default class AvgInventory extends React.Component {
     componentDidMount() {
         axios.get('http://localhost:3002/inventory/avginventory?value=' + this.state.value).then((res) => {
             console.log(res);
-            this.setState({data: this.state.value});
+            this.setState({data: res.data[0].avg});
         });
     }
         render() {
             return (
                 <div className="main4">
+                <div className='title'>
+                Average Inventory Per Year
+                </div>
+                <div className='input'>
                     <input type='text' value={this.state.value} placeholder="Fiscal Year" onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/> {this.state.data}
+                    <input type='submit' value='Submit'/>
+                    </div>
+                    <div className="text4">
+                    {this.state.data}
+                    </div>
                 </div>
             )
         }
