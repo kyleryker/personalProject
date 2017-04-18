@@ -15,6 +15,10 @@ export default class daysToSell extends React.Component {
     }
     handleChange(event) {
         this.setState({value: event.target.value});
+        axios.get('http://localhost:3002/inventory/daystosell?value=' + this.state.value).then((res) => {
+            console.log(res);
+            this.setState({data:res.data[0].days});
+        });
     }
 
     handleSubmit(event) {
@@ -38,7 +42,7 @@ export default class daysToSell extends React.Component {
                     <input type='submit' value='Submit'/>
                     </div>
                     <div className='text5'>
-                    {this.state.data * 365} days
+                    {this.state.data* 365} days
                     </div>
                 </div>
             )

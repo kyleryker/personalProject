@@ -15,6 +15,10 @@ export default class Turnover extends React.Component {
     }
     handleChange(event) {
         this.setState({value: event.target.value});
+        axios.get('http://localhost:3002/inventory/turnover?value=' + this.state.value).then((res) => {
+            console.log(res);
+            this.setState({data:res.data[0].cost})
+        });
     }
 
     handleSubmit(event) {
