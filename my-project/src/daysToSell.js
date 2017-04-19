@@ -39,7 +39,7 @@ export default class daysToSell extends React.Component {
                 </div>
                 <div className='input'>
                     <input type='text' value={this.state.value} placeholder='Fiscal Year' onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/>
+
                     </div>
                     <div className='text5'>
                     {this.state.data* 365} days

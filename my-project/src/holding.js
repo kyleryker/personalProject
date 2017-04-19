@@ -39,10 +39,10 @@ export default class Holding extends React.Component {
                 </div>
                 <div className='input'>
                     <input type='text' value={this.state.value} placeholder='item number' onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/>
+
                     </div>
                     <div className="text3">
-                    {this.state.data}
+                    ${this.state.data}
                     </div>
                 </div>
             )

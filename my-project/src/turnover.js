@@ -39,7 +39,7 @@ export default class Turnover extends React.Component {
                 </div>
                 <div className='input'>
                     <input type='text' value={this.state.value} placeholder='fiscal year' onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/>
+
                     </div>
                     <div className='text1'>
                     {this.state.data} turnovers per year

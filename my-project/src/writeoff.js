@@ -39,7 +39,7 @@ export default class Writeoff extends React.Component {
                 </div>
                 <div className='input'>
                     <input type='text' value={this.state.value} placeholder='Sales Period' onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/>
+
                     </div>
                     <div className='text2'>
                     {this.state.data} written off

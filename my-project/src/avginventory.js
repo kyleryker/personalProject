@@ -23,7 +23,6 @@ export default class AvgInventory extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({value:this.state.value});
     }
     componentDidMount() {
         axios.get('http://localhost:3002/inventory/avginventory?value=' + this.state.value).then((res) => {
@@ -39,7 +38,7 @@ export default class AvgInventory extends React.Component {
                 </div>
                 <div className='input'>
                     <input type='text' value={this.state.value} placeholder="Fiscal Year" onChange={this.handleChange}/>
-                    <input type='submit' value='Submit'/>
+
                     </div>
                     <div className="text4">
                     {this.state.data}
