@@ -16,7 +16,7 @@ let db = app.get('db');
 
 app.use(bodyParser.json());
 
-app.use(express.static('src'))
+app.use(express.static('build'))
 
 app.get('/inventory/turnover', (req, res, next) => {
     db.turnover([parseInt(req.query.value)], (err, data) => {
