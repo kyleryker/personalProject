@@ -23,7 +23,6 @@ export default class daysToSell extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({value:this.state.value});
     }
     componentDidMount() {
         axios.get('http://localhost:3002/inventory/daystosell?value=' + this.state.value).then((res) => {
@@ -35,14 +34,14 @@ export default class daysToSell extends React.Component {
             return (
                 <div className="main5">
                 <div className='title'>
-                Days to Sell Stock
+                Days to Sell Ratio
                 </div>
                 <div className='input'>
                     <input type='text' value={this.state.value} placeholder='Fiscal Year' onChange={this.handleChange}/>
 
                     </div>
                     <div className='text5'>
-                    {this.state.data* 365} days
+                    {this.state.data*365}
                     </div>
                 </div>
             )

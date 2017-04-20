@@ -7,7 +7,7 @@ export default class Writeoff extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
-            value: '1'
+            value: '2'
         };
 
         this.handleChange = this.handleChange.bind(this);
@@ -17,18 +17,17 @@ export default class Writeoff extends React.Component {
         this.setState({value: event.target.value});
         axios.get(`http://localhost:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
             console.log(res);
-            this.setState({data:res.data[0]});
+            this.setState({data:res.data[0].lbkum});
         });
     }
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({value:this.state.value});
     }
     componentDidMount() {
         axios.get(`http://localhost:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
             console.log(res);
-            this.setState({data:res.data[0]});
+            this.setState({data:res.data[0].lbkum});
         });
     }
         render() {

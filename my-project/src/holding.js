@@ -23,7 +23,7 @@ export default class Holding extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
-        this.setState({value:this.state.value});
+
     }
     componentDidMount() {
         axios.get('http://localhost:3002/inventory/holding?value=' + this.state.value).then((res) => {
