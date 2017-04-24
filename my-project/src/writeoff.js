@@ -41,7 +41,7 @@ export default class Writeoff extends React.Component {
 
                     </div>
                     <div className='text2'>
-                    {this.state.data} written off
+                    ${this.state.data} written off
                     </div>
                 </div>
             )
