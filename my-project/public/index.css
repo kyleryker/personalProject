@@ -1,73 +1,82 @@
+body{
+  background-image: url("../serene-pictures-wallpaper-4.jpg");
+}
 .main1{
-  color: black;
-  height: 49vh;
-  width: 49vw;
+  background-color: white;
+  height: 30vh;
+  width: 30vw;
   position: absolute;
   left: 0;
-  top:0;
-  border: solid 3px lightblue;
+  top:30vh;
 }
 .main2{
-  height: 49vh;
-  width: 49vw;
+  background-color: white;
+  height: 30vh;
+  width: 30vw;
   position:absolute;
-  top: 50vh;
+  bottom: 0;
   left: 0;
-  border: solid 3px lightblue;
 }
 .main3{
-  height: 32vh;
-  width: 50vw;
+  background-color: white;
+  height: 30vh;
+  width: 30vw;
   position: absolute;
   right: 0;
-  top: 0;
-  border: solid 3px lightblue;
+  top: 30vh;
 }
 .main4{
-  height: 33vh;
-  width: 50vw;
+  background-color: white;
+  height: 30vh;
+  width: 30vw;
   position: absolute;
   right: 0;
- top: 32vh;
- border: solid 3px lightblue;
+ bottom: 0;
 }
 .main5{
-  height: 33vh;
-  width: 50vw;
+  background-color: white;
+  height: 30vh;
+  width: 33vw;
   position: absolute;
-  right: 0;
-  bottom: 0;
-  border: solid 3px lightblue;
+  right: 33vw;
+  top: 0;
+}
+.main6{
+  height: 60vh;
+  width: 37vw;
+  position: absolute;
+  bottom: 3vh;
+  right: 33vw;
 }
 .text1{
 text-align: center;
-font-size: 70px;
+font-size: 30px;
 position:relative;
-top: 70px;
+top: 50px;
 }
 .text2{
   text-align: center;
-  font-size: 70px;
+  font-size: 30px;
   position:relative;
-  top: 70px;
+  top: 50px;
 }
 .text3{
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   position:relative;
-  top: 35px;
+  top: 50px;
 }
 .text4{
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   position:relative;
-  top: 35px;
+  top: 50px;
 }
 .text5{
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   position:relative;
-  top: 35px;
+  top: 50px;
 }
 .title{
   text-align: center;

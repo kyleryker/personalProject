@@ -2,7 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const massive = require('massive');
 const React = require('react');
-let connectionString = "postgres://postgres:mikhail4@localhost/postgres";
+let connectionString = "postgres://postgres:mikhail4@localhost:3001/postgres";
 const app = module.exports = express();
 const cors = require('cors');
 
@@ -51,4 +51,4 @@ app.get('/inventory/daystosell', (req, res, next) => {
 
     });
 });
-app.listen(80, () => console.log('listening on port 80'));
+app.listen(3002, () => console.log('listening on port 3002'));
