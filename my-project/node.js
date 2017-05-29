@@ -51,4 +51,4 @@ app.get('/inventory/daystosell', (req, res, next) => {
 
     });
 });
-app.listen(3002, () => console.log('listening on port 3002'));
+app.listen(80, () => console.log('listening on port 80'));
