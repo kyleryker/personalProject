@@ -15,7 +15,7 @@ export default class Holding extends React.Component {
     }
     handleChange(event) {
         this.setState({value: event.target.value});
-        axios.get('http://localhost:3002/inventory/holding?value=' + this.state.value).then((res) => {
+        axios.get('http://138.68.229.153:3002/inventory/holding?value=' + this.state.value).then((res) => {
             console.log(res);
             this.setState({data:res.data[0].kalkl});
         });
@@ -26,7 +26,7 @@ export default class Holding extends React.Component {
 
     }
     componentDidMount() {
-        axios.get('http://localhost:3002/inventory/holding?value=' + this.state.value).then((res) => {
+        axios.get('http://138.68.229.153:3002/inventory/holding?value=' + this.state.value).then((res) => {
             console.log(res);
             this.setState({data:res.data[0].kalkl});
         });

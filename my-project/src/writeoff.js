@@ -15,7 +15,7 @@ export default class Writeoff extends React.Component {
     }
     handleChange(event) {
         this.setState({value: event.target.value});
-        axios.get(`http://localhost:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
+        axios.get(`http://138.68.229.153:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
             console.log(res);
             this.setState({data:res.data[0].lbkum});
         });
@@ -25,7 +25,7 @@ export default class Writeoff extends React.Component {
         event.preventDefault();
     }
     componentDidMount() {
-        axios.get(`http://localhost:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
+        axios.get(`http://138.68.229.153:3002/inventory/writeoff?value=` + this.state.value).then((res) => {
             console.log(res);
             this.setState({data:res.data[0].lbkum});
         });
