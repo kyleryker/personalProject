@@ -53,8 +53,8 @@ app.get('/inventory/daystosell', (req, res, next) => {
     });
 });
 
-app.get('*', (req, res, next) => {
-  res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
-});
+// app.get('*', (req, res, next) => {
+//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+// });
 
 app.listen(3002, () => console.log('listening on port 3002'));
