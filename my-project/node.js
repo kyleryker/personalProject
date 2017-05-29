@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const massive = require('massive');
 const React = require('react');
 const path = require ('path');
-let connectionString = "postgres://postgres:mikhail4@localhost:3001/postgres";
+let connectionString = "postgres://postgres:mikhail4@138.68.229.153/postgres";
 const app = module.exports = express();
 const cors = require('cors');
 
@@ -53,8 +53,8 @@ app.get('/inventory/daystosell', (req, res, next) => {
     });
 });
 
-// app.get('*', (req, res, next) => {
-//   res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
-// });
+app.get('*', (req, res, next) => {
+  res.sendFile(path.resolve(__dirname, 'build', 'index.html'))
+});
 
 app.listen(3002, () => console.log('listening on port 3002'));
