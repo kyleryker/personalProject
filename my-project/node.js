@@ -3,7 +3,7 @@ const bodyParser = require('body-parser');
 const massive = require('massive');
 const React = require('react');
 const path = require ('path');
-let connectionString = "postgres://postgres:mikhail4@138.68.229.153/postgres";
+let connectionString = "postgres://postgres:mikhail4@138.68.229.153:3000/postgres";
 const app = module.exports = express();
 const cors = require('cors');
 
